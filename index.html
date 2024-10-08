@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Quiz</title>
+</head>
+<body>
+    <p id="demo">Pergunta 1: Quano vai ser a primeira avaliação ?</p>
+
+<form>
+  <input type="radio" id="alternativa1" name="pergunta1" value="data1">
+  <label for="html">08/10</label><br>
+  <input type="radio" id="alternativa2" name="pergunta1" value="data2">
+  <label for="css">15/10</label><br>
+  <input type="radio" id="alternativa3" name="pergunta1" value="data3">
+  <label for="javascript">22/10</label>
+
+  <script>
+    function ChecarResposta(){
+        const OpcaoEscolhida = document.querySelector('input[name="pergunta1"]:checked');
+        const RespostaCerta = "data2";
+        alert(OpcaoEscolhida.value);
+        document.getElementById("demo").innerHTML = "Hello JavaScript";
+        if (OpcaoEscolhida.value == RespostaCerta){
+            window.location.href = 'questao.html';
+            alert('ACERTOU MIZERAVI,continue na proxima pagina')
+        }else{
+            alert('Opção Errada =(')
+        }
+    }
+    </script>
+
+   <br><br><button type="button" onclick="ChecarResposta()">Responder</button>
+
+</form>
+    
+</body>
+</html>
